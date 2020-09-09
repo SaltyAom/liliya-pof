@@ -1,0 +1,21 @@
+{
+	"name": "liliya",
+	"version": "0.0.1",
+	"description": "A minimum viable Electron app with Parcel Bundler.",
+	"repository": "SaltyAom/liliya-alpha",
+	"author": "SaltyAom <aomkirby123@gmail.com>",
+	"license": "MIT",
+	"main": "index.js",
+	"scripts": {
+		"start": "electron .",
+		"build": "parcel build src/index.html --public-url . -d build && cp -r ./assets ./build/assets && electron-builder"
+	},
+	"keywords": [],
+	"dependencies": {},
+	"devDependencies": {
+		"electron": "^9.2.1",
+		"electron-builder": "^22.8.0",
+		"execa": "^4.0.3",
+		"parcel-bundler": "^1.12.4"
+	}
+}

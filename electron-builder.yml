@@ -1,0 +1,10 @@
+appId: com.saltyaom.alpha.liliya
+productName: Liliya Alpha
+copyright: Copyright © 2020 SaltyAom
+directories:
+  output: dist
+  buildResources: resources
+files:
+  - "build/"
+  - "index.js"
+publish: null

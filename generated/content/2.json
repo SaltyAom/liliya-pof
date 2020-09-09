@@ -1,0 +1,573 @@
+{
+	"header": {
+		"title": "บันทึกการ optimize web React จาก 2MB เหลือ 14.5KB",
+		"src": "file:///Users/aomkhunpanitchot/Documents/web/liliya/generated/assets/dreamin.png",
+		"alt": "dreamin.png"
+	},
+	"content": [
+		{ "nodeName": "h1", "textContent": "Search Dreamin" },
+		{
+			"nodeName": "p",
+			"children": [
+				"",
+				{
+					"nodeName": "a",
+					"textContent": "Search Dreamin ",
+					"href": "http://dreamin-edge.now.sh/"
+				},
+				"เป็น web app ที่สร้างขึ้น เพื่อใช้ดูเมนูร้าน Maid Cafe ที่ MBK เพื่อเตรียมเงินให้พร้อมและหารเงินไปก่อนได้เลย"
+			],
+			"textContent": "Search Dreamin เป็น web app ที่สร้างขึ้น เพื่อใช้ดูเมนูร้าน Maid Cafe ที่ MBK เพื่อเตรียมเงินให้พร้อมและหารเงินไปก่อนได้เลย"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"โดยเดิมทีเรามี API ที่เขียนขึ้นเองจากการเอาคอมไปตั้งร้านเมดคาเฟ่ แล้วขอยืมเมนูมาพิมพ์เพื่อเอาไว้ใช้ดูเมนูจากที่บ้านได้"
+			],
+			"textContent": "โดยเดิมทีเรามี API ที่เขียนขึ้นเองจากการเอาคอมไปตั้งร้านเมดคาเฟ่ แล้วขอยืมเมนูมาพิมพ์เพื่อเอาไว้ใช้ดูเมนูจากที่บ้านได้"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"แต่ว่าเราอยากได้มากกว่านั้น ซึ่งก็คือ การที่เราไม่ต้องมานั่งบวกราคาเอง แต่ให้อะไรก็ได้คิดราคาให้เลย แล้วไม่ต้องมานั่งไล่หาเมนู แต่พิมพ์หาได้เลย"
+			],
+			"textContent": "แต่ว่าเราอยากได้มากกว่านั้น ซึ่งก็คือ การที่เราไม่ต้องมานั่งบวกราคาเอง แต่ให้อะไรก็ได้คิดราคาให้เลย แล้วไม่ต้องมานั่งไล่หาเมนู แต่พิมพ์หาได้เลย"
+		},
+		{
+			"nodeName": "p",
+			"children": ["โดยจะเริ่มจาก Web App แรกก่อนที่จะเริ่ม Optimize"],
+			"textContent": "โดยจะเริ่มจาก Web App แรกก่อนที่จะเริ่ม Optimize"
+		},
+		{
+			"nodeName": "h1",
+			"children": ["Server Dreamin"],
+			"textContent": "Server Dreamin"
+		},
+		{
+			"nodeName": "img",
+			"textContent": "",
+			"children": [""],
+			"src": "file:///Users/aomkhunpanitchot/Documents/web/liliya/generated/assets/search-dreamin.png",
+			"alt": "search-dreamin.png"
+		},
+		{
+			"nodeName": "p",
+			"textContent": "Search Dreamin เป็น web app ที่ตอนแรกเราตั้งใจจะ over-engineer ให้สุดๆ ไปเลยตั้งแต่แรก โดยเลือกใช้ Technology ที่เป็น cutting-edge technology ในช่วงนั้น",
+			"children": [
+				{
+					"nodeName": "a",
+					"textContent": "Search Dreamin",
+					"href": "https://dreamin-edge.now.sh"
+				},
+				" เป็น web app ที่ตอนแรกเราตั้งใจจะ over-engineer ให้สุดๆ ไปเลยตั้งแต่แรก โดยเลือกใช้ Technology ที่เป็น cutting-edge technology ในช่วงนั้น"
+			]
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"View library เลือกใช้ Preact 10 alpha 3 กับ Nextjs แล้วใช้ Stylus เป็น CSS Preprocessor โดยที่ตอนนั้นยังไม่มีใคร ลองเอา Preact 10 (Preact ที่มี hooks) มาใช้กับ Next.js จนมีคนเปิด issue บน repo ของ Next.js แล้ว reference มาถึง ",
+				{
+					"nodeName": "a",
+					"textContent": "ตัวอย่างที่เราเคยทำไว้",
+					"href": "https://github.com/SaltyAom/nextjs-preactx"
+				}
+			],
+			"textContent": "View library เลือกใช้ Preact 10 alpha 3 กับ Nextjs แล้วใช้ Stylus เป็น CSS Preprocessor โดยที่ตอนนั้นยังไม่มีใคร ลองเอา Preact 10 (Preact ที่มี hooks) มาใช้กับ Next.js จนมีคนเปิด issue บน repo ของ Next.js แล้ว reference มาถึง ตัวอย่างที่เราเคยทำไว้"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"โดยหน้าที่ของตัว Frontend จะสามารถแสดงเมนูจากร้านเมดคาเฟ่ แล้วทำการเลือกสินค้าที่เราจะสั่ง แล้วคำนวนราคารวมกับ service charge มาให้เลย"
+			],
+			"textContent": "โดยหน้าที่ของตัว Frontend จะสามารถแสดงเมนูจากร้านเมดคาเฟ่ แล้วทำการเลือกสินค้าที่เราจะสั่ง แล้วคำนวนราคารวมกับ service charge มาให้เลย"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"แล้วก็สามารถ sort ราคาสินค้ากับชื่อได้ หรือจะพิมพ์หาก็ได้"
+			],
+			"textContent": "แล้วก็สามารถ sort ราคาสินค้ากับชื่อได้ หรือจะพิมพ์หาก็ได้"
+		},
+		{
+			"nodeName": "img",
+			"children": [""],
+			"textContent": "",
+			"src": "file:///Users/aomkhunpanitchot/Documents/web/liliya/generated/assets/search-dreamin-sort.png",
+			"alt": "search-dreamin-sort.png"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"ด้วยความที่เราอยากได้อะไรที่ over-engineer มากๆ เราเลยเลือกใช้ GraphQL เพราะ ชื่อมันเท่ดี แล้วก็ได้ยินว่าทำ Analytic ให้เองแถมมี caching ให้ด้วย โดยเราเลือกใช้ Apollo Server เป็น Backend"
+			],
+			"textContent": "ด้วยความที่เราอยากได้อะไรที่ over-engineer มากๆ เราเลยเลือกใช้ GraphQL เพราะ ชื่อมันเท่ดี แล้วก็ได้ยินว่าทำ Analytic ให้เองแถมมี caching ให้ด้วย โดยเราเลือกใช้ Apollo Server เป็น Backend"
+		},
+		{ "nodeName": "h1", "children": [""], "textContent": "API Server" },
+		{
+			"nodeName": "img",
+			"textContent": "",
+			"children": [""],
+			"src": "file:///Users/aomkhunpanitchot/Documents/web/liliya/generated/assets/ss1.png",
+			"alt": "ss1.png"
+		},
+		{
+			"nodeName": "p",
+			"textContent": "ด้วยความที่ตั้งใจจะ over-engineer อยู่แล้ว ก็เลยสร้าง Reverse proxy server จาก REST API Server ที่เคยเขียนขึ้นมาก่อนอยู่แล้ว แล้วให้ Apollo Cache request เอา",
+			"children": [
+				"ด้วยความที่ตั้งใจจะ over-engineer อยู่แล้ว ก็เลยสร้าง Reverse proxy server จาก REST API Server ที่เคยเขียนขึ้นมาก่อนอยู่แล้ว แล้วให้ Apollo Cache request เอา"
+			]
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"โดยเราเลือกใช้ Apollo GraphQL Server เพื่อให้เรียก API ผ่าน GraphQL ได้เลย แล้วใช้ Apollo Client มาทำหน้าที่เรียก API โดยที่ตอนนั้น React hooks ใน Apollo Server พึ่งจะมาใหม่ๆ เลยได้โอกาสลองของซะเลย"
+			],
+			"textContent": "โดยเราเลือกใช้ Apollo GraphQL Server เพื่อให้เรียก API ผ่าน GraphQL ได้เลย แล้วใช้ Apollo Client มาทำหน้าที่เรียก API โดยที่ตอนนั้น React hooks ใน Apollo Server พึ่งจะมาใหม่ๆ เลยได้โอกาสลองของซะเลย"
+		},
+		{
+			"nodeName": "h1",
+			"children": ["2MB Production size"],
+			"textContent": "2MB bundle size"
+		},
+		{
+			"nodeName": "img",
+			"textContent": "",
+			"children": [""],
+			"src": "file:///Users/aomkhunpanitchot/Documents/web/liliya/generated/assets/apollo-bundle-size.png",
+			"alt": "apollo-bundle-size.png"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"จุดเริ่มต้นของการ optimize หลังจากผ่านไป 1 ปี เริ่มมาจากการที่เราได้ไปลองดูคะแนนใน Lighthouse แล้วก็ตกใจว่าทำไมได้คะแนนน้อยมาก ก็เริ่มคิดว่ามีอะไรที่เรา optimize ได้บ้างไหม"
+			],
+			"textContent": "จุดเริ่มต้นของการ optimize หลังจากผ่านไป 1 ปี เริ่มมาจากการที่เราได้ไปลองดูคะแนนใน Lighthouse แล้วก็ตกใจว่าทำไมได้คะแนนน้อยมาก ก็เริ่มคิดว่ามีอะไรที่เรา optimize ได้บ้างไหม"
+		},
+		{
+			"nodeName": "h2",
+			"children": [""],
+			"textContent": "จาก​ Preact Compat + Next.js เป็น Pure Preact"
+		},
+		{
+			"nodeName": "p",
+			"textContent": "Preact เป็น library ที่เหมือนกับ React แล้วก็มี API แบบเดียวกับ React แต่มีขนาดเล็กกว่า โดย Preact มีขนาดแค่ 3KB (Gzipped) เทียบกับ React ที่ Hello World อยู่ที่เกือบจะ 100KB",
+			"children": [
+				"Preact เป็น library ที่เหมือนกับ React แล้วก็มี API แบบเดียวกับ React แต่มีขนาดเล็กกว่า โดย Preact มีขนาดแค่ 3KB (Gzipped) เทียบกับ React ที่ Hello World อยู่ที่เกือบจะ 100KB"
+			]
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"แต่การใช้ Preact คู่กับ Nextjs จำเป็นต้องใช้ API ที่เหมือนกับ React แทบจะ 100% ทำให้เราไม่สามารถใช้ Preact ตรงๆ ขนาด 3KB ได้ เลยต้องใช้ Preact Compat ที่เป็น Compatibility Layer สำหรับใช้กับ Library ที่ต้องการ React โดยตรง"
+			],
+			"textContent": "แต่การใช้ Preact คู่กับ Nextjs จำเป็นต้องใช้ API ที่เหมือนกับ React แทบจะ 100% ทำให้เราไม่สามารถใช้ Preact ตรงๆ ขนาด 3KB ได้ เลยต้องใช้ Preact Compat ที่เป็น Compatibility Layer สำหรับใช้กับ Library ที่ต้องการ React โดยตรง"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"โดยที่ขนาดของ Preact Compat ถ้าไม่ทำการ tree shaking จะอยู่ที่ประมาณ 9KB (Gzipped) พอใช้คู่กับ Next.js ก็จะเริ่มต้นที่ 25KB สำหรับ Hello World"
+			],
+			"textContent": "โดยที่ขนาดของ Preact Compat ถ้าไม่ทำการ tree shaking จะอยู่ที่ประมาณ 9KB (Gzipped) พอใช้คู่กับ Next.js ก็จะเริ่มต้นที่ 25KB สำหรับ Hello World"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"พอมีการใช้ Library หลายๆ อย่างที่มีขนาดใหญ่เช่น ตระกูล apollo, rxjs, ตระกูล redux (react-redux, reselect, redux-persist) และ library อื่นๆ ที่ไม่ได้จำเป็นต้องใช้ใน web app นี้ เช่น React Spring, react-with-gesture ก็ทำให้ bundle size ของ JavaScript กลายเป็น 2MB ทั้งๆ ที่ไม่ได้เขียน code เยอะ (มีแค่ 2 หน้าเอง)"
+			],
+			"textContent": "พอมีการใช้ Library หลายๆ อย่างที่มีขนาดใหญ่เช่น ตระกูล apollo, rxjs, ตระกูล redux (react-redux, reselect, redux-persist) และ library อื่นๆ ที่ไม่ได้จำเป็นต้องใช้ใน web app นี้ เช่น React Spring, react-with-gesture ก็ทำให้ bundle size ของ JavaScript กลายเป็น 2MB ทั้งๆ ที่ไม่ได้เขียน code เยอะ (มีแค่ 2 หน้าเอง)"
+		},
+		{
+			"nodeName": "h1",
+			"children": ["เริ่มจากคิด Architecture ใหม่"],
+			"textContent": "เริ่มจากคิด Architecture ใหม่"
+		},
+		{
+			"nodeName": "p",
+			"textContent": "ในบางครั้งการสร้างมันขึ้นมาใหม่ก็ดีกว่ารื้อของเก่ามาทำใหม่",
+			"children": [
+				"ในบางครั้งการสร้างมันขึ้นมาใหม่ก็ดีกว่ารื้อของเก่ามาทำใหม่"
+			]
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"โดยครั้งนี้เราตั้งใจจะทำให้เล็กและเร็วที่สุดแต่มี feature เหมือนเดิม (หรือมากกว่า)"
+			],
+			"textContent": "โดยครั้งนี้เราตั้งใจจะทำให้เล็กและเร็วที่สุดแต่มี feature เหมือนเดิม (หรือมากกว่า)"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"โดยเริ่มจากการคิดว่าเราจำเป็นตั้งใช้ Next.js จริงๆ หรือเปล่า เพราะถ้าคิดดูดีๆ แล้ว ตัว web app นี้ไม่จำเป็นตั้งทำ SSR ก็ได้ เพราะแทบจะไม่ได้ใช้ feature อะไรของ SSR เลย"
+			],
+			"textContent": "โดยเริ่มจากการคิดว่าเราจำเป็นตั้งใช้ Next.js จริงๆ หรือเปล่า เพราะถ้าคิดดูดีๆ แล้ว ตัว web app นี้ไม่จำเป็นตั้งทำ SSR ก็ได้ เพราะแทบจะไม่ได้ใช้ feature อะไรของ SSR เลย"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"ทำให้เราย้ายจาก Nextjs ไปใช้ Preact CLI เพื่อที่ทำเป็น Pure Preact ได้ โดยที่มีขนาดเริ่มต้นแค่ 3KB (Gzipped)"
+			],
+			"textContent": "ทำให้เราย้ายจาก Nextjs ไปใช้ Preact CLI เพื่อที่ทำเป็น Pure Preact ได้ โดยที่มีขนาดเริ่มต้นแค่ 3KB (Gzipped)"
+		},
+		{
+			"nodeName": "img",
+			"children": [""],
+			"textContent": "",
+			"src": "file:///Users/aomkhunpanitchot/Documents/web/liliya/generated/assets/preact-size.png",
+			"alt": "preact-size.png"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"โดยตัว Preact CLI จะทำการ Pre-render และทำ Code Splitting ให้เองซึ่งดีในระดับนึง แต่ส่วนตัวแล้วคิดว่า Next.js ทำได้ดีกว่า"
+			],
+			"textContent": "โดยตัว Preact CLI จะทำการ Pre-render และทำ Code Splitting ให้เองซึ่งดีในระดับนึง แต่ส่วนตัวแล้วคิดว่า Next.js ทำได้ดีกว่า"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"จากนั้นก็คิดถึงจุดประสงค์จริงๆ ของ web app ว่าต้องการทำอะไร แล้วสามารถทำยังไงให้มีขนาดเล็กลง หรือ หา Alternative library ไม่ก็ถ้า drop ได้ก็ drop ไปเลยเช่น ใช้ React Context แทน Redux ไหม? จำเป็นต้องใช้ GraphQL จริงๆ หรือเปล่า? จำเป็นต้องเลื่อน Card ไปทางซ้ายเพื่อเพิ่ม order จริงๆ ไหม?"
+			],
+			"textContent": "จากนั้นก็คิดถึงจุดประสงค์จริงๆ ของ web app ว่าต้องการทำอะไร แล้วสามารถทำยังไงให้มีขนาดเล็กลง หรือ หา Alternative library ไม่ก็ถ้า drop ได้ก็ drop ไปเลยเช่น ใช้ React Context แทน Redux ไหม? จำเป็นต้องใช้ GraphQL จริงๆ หรือเปล่า? จำเป็นต้องเลื่อน Card ไปทางซ้ายเพื่อเพิ่ม order จริงๆ ไหม?"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"คำตอบโดยส่วนใหญ่แล้วก็คือไม่ ทำให้ตัด feature ที่ไม่จำเป็นแล้วหรือแค่ feature ที่ต้องการจริงๆ แค่นั้น"
+			],
+			"textContent": "คำตอบโดยส่วนใหญ่แล้วก็คือไม่ ทำให้ตัด feature ที่ไม่จำเป็นแล้วหรือแค่ feature ที่ต้องการจริงๆ แค่นั้น"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"บางส่วนที่จำเป็นจริงๆ ก็หาวิธีการลดขนาดหรือทำ Tree Shaking ก็ได้ เช่น drop redux ไปใช้ library อื่น โดยส่วนตัวเลือกใช้ storeon เพราะทำ performance ใน use-case นี้ได้ดีกว่า redux แต่มี Store มากกว่าที่จะใช้ React Context อย่างเดียว แถมขนาดบน Production แค่ 143 byte เอง"
+			],
+			"textContent": "บางส่วนที่จำเป็นจริงๆ ก็หาวิธีการลดขนาดหรือทำ Tree Shaking ก็ได้ เช่น drop redux ไปใช้ library อื่น โดยส่วนตัวเลือกใช้ storeon เพราะทำ performance ใน use-case นี้ได้ดีกว่า redux แต่มี Store มากกว่าที่จะใช้ React Context อย่างเดียว แถมขนาดบน Production แค่ 143 byte เอง"
+		},
+		{
+			"nodeName": "img",
+			"children": [""],
+			"textContent": "",
+			"src": "file:///Users/aomkhunpanitchot/Documents/web/liliya/generated/assets/storeon.png",
+			"alt": "storeon.png"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"Router ก็ใช้อย่างอื่นแทน React Router ที่มีขนาด 11KB ไปใช้ wouter, library ที่เหมือนทำ Routing ใน React แต่ขนาดแค่ 1KB ซึ่งถ้าใช้ดีๆ ก็ลดให้เหลือ 341 Byte ได้"
+			],
+			"textContent": "Router ก็ใช้อย่างอื่นแทน React Router ที่มีขนาด 11KB ไปใช้ wouter, library ที่เหมือนทำ Routing ใน React แต่ขนาดแค่ 1KB ซึ่งถ้าใช้ดีๆ ก็ลดให้เหลือ 341 Byte ได้"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"ส่วนตัว Apollo ก็หันไปใช้ REST API ธรรมดาๆ แทน เพราะไม่ได้มีความจำเป็นต้องเรียก แค่บางส่วน แต่ต้องการทั้งหมดในทีเดียวเลย แถม API ก็ไม่ได้เปลี่ยนบ่อยๆ ทำให้ทำ caching ที่ client-side ได้ โดยการเก็บไว้ที่ LocalStorage ได้เลย"
+			],
+			"textContent": "ส่วนตัว Apollo ก็หันไปใช้ REST API ธรรมดาๆ แทน เพราะไม่ได้มีความจำเป็นต้องเรียก แค่บางส่วน แต่ต้องการทั้งหมดในทีเดียวเลย แถม API ก็ไม่ได้เปลี่ยนบ่อยๆ ทำให้ทำ caching ที่ client-side ได้ โดยการเก็บไว้ที่ LocalStorage ได้เลย"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"นอกจากนี้ ด้วยความที่เป็น build เป็น static แล้ว ทำให้ทำ service worker ได้ง่ายขึ้นมากๆ เพราะทุกอย่างเป็น static"
+			],
+			"textContent": "นอกจากนี้ ด้วยความที่เป็น build เป็น static แล้ว ทำให้ทำ service worker ได้ง่ายขึ้นมากๆ เพราะทุกอย่างเป็น static"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"อีกทั้งตัว Preact CLI ยังทำการ build​ JavaScript สำหรับ ES5 และ ESM โดยจะเลือกใช้ ESM ถ้า browser support ทำให้ช่วยลดขนาด bundle ของ JavaScript ที่เรียกใช้"
+			],
+			"textContent": "อีกทั้งตัว Preact CLI ยังทำการ build​ JavaScript สำหรับ ES5 และ ESM โดยจะเลือกใช้ ESM ถ้า browser support ทำให้ช่วยลดขนาด bundle ของ JavaScript ที่เรียกใช้"
+		},
+		{
+			"nodeName": "h1",
+			"children": ["Performance Optimization"],
+			"textContent": "Performance Optimization"
+		},
+		{
+			"nodeName": "p",
+			"textContent": "นอกจาก Optimize เรื่องขนาดของ web app แล้ว ตัว React/Preact เองก็ได้ทำการ optimize ภายในด้วย",
+			"children": [
+				"นอกจาก Optimize เรื่องขนาดของ web app แล้ว ตัว React/Preact เองก็ได้ทำการ optimize ภายในด้วย"
+			]
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"โดยเริ่มจาก React Memo ให้ memoize card ทำให้เวลาเกิดการ Re-render บน Ancestor ตัว Component จะไม่ re-render ยกเว้น props ที่เรากำหนดไว้จะเปลี่ยน โดยเราสามารถตั้ง memoize function ได้เองด้วย"
+			],
+			"textContent": "โดยเริ่มจาก React Memo ให้ memoize card ทำให้เวลาเกิดการ Re-render บน Ancestor ตัว Component จะไม่ re-render ยกเว้น props ที่เรากำหนดไว้จะเปลี่ยน โดยเราสามารถตั้ง memoize function ได้เองด้วย"
+		},
+		{
+			"nodeName": "img",
+			"children": [""],
+			"textContent": "",
+			"src": "file:///Users/aomkhunpanitchot/Documents/web/liliya/generated/assets/memoize.png",
+			"alt": "memoize.png"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"การใช้ useMemo, useCallback ต่างๆ ช่วยให้หลายๆ อย่างไม่ต้องถูก re-render และประหยัด performance ไปได้อีกเยอะ"
+			],
+			"textContent": "การใช้ useMemo, useCallback ต่างๆ ช่วยให้หลายๆ อย่างไม่ต้องถูก re-render และประหยัด performance ไปได้อีกเยอะ"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"การใช้ function เดียวกันในหลายๆ component ช่วยลด memory footprint ได้ เพราะ React ใช้เทคนิค Event Delegation (การเอา event ไปไว้ที่ root node แล้ว bubble ขึ้นมาเทียบ)"
+			],
+			"textContent": "การใช้ function เดียวกันในหลายๆ component ช่วยลด memory footprint ได้ เพราะ React ใช้เทคนิค Event Delegation (การเอา event ไปไว้ที่ root node แล้ว bubble ขึ้นมาเทียบ)"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"เช่นการใช้ useMemo ใน sort function ที่มีการคำนวนสูง ก็ทำให้เรียกมาใช้ได้ทันทีในครั้งที่ 2"
+			],
+			"textContent": "เช่นการใช้ useMemo ใน sort function ที่มีการคำนวนสูง ก็ทำให้เรียกมาใช้ได้ทันทีในครั้งที่ 2"
+		},
+		{
+			"nodeName": "h2",
+			"children": [""],
+			"textContent": "Skeleton Layout"
+		},
+		{
+			"nodeName": "img",
+			"textContent": "",
+			"children": [""],
+			"src": "file:///Users/aomkhunpanitchot/Documents/web/liliya/generated/assets/skeleton-layout.png",
+			"alt": "skeleton-layout.png"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"Skeleton Layout เป็นเทคนิคที่นิยมใช้มากๆ ในการ optimize web"
+			],
+			"textContent": "Skeleton Layout เป็นเทคนิคที่นิยมใช้มากๆ ในการ optimize web"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"โดยสำหรับ Library ที่มีการใช้ Virtual DOM แล้ว การเปลี่ยนแค่บางส่วนจะมี performance มากกว่าการเขียนใหม่ทั้งหมด โดยการที่เรามีส่วนที่ใกล้เคียงกับส่วนที่จะ render หลักอยู่แล้ว ทำให้ประหยัดการเขียน Node ไปได้เยอะมาก"
+			],
+			"textContent": "โดยสำหรับ Library ที่มีการใช้ Virtual DOM แล้ว การเปลี่ยนแค่บางส่วนจะมี performance มากกว่าการเขียนใหม่ทั้งหมด โดยการที่เรามีส่วนที่ใกล้เคียงกับส่วนที่จะ render หลักอยู่แล้ว ทำให้ประหยัดการเขียน Node ไปได้เยอะมาก"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"เนื่องจากมีการทำ pre-render เป็น static HTML ทำให้ (P)react ไม่จำเป็นต้องเขียน node ขึ้นใหม่ แต่สามารถ hydrate ได้เลย แถมไม่ต้องรอให้ JavaScript ทำงานแล้วรอให้ React render ขึ้นมาอีก"
+			],
+			"textContent": "เนื่องจากมีการทำ pre-render เป็น static HTML ทำให้ (P)react ไม่จำเป็นต้องเขียน node ขึ้นใหม่ แต่สามารถ hydrate ได้เลย แถมไม่ต้องรอให้ JavaScript ทำงานแล้วรอให้ React render ขึ้นมาอีก"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"โดยเฉพาะเมื่อมี metric ของ web vital เข้ามามีส่วนด้วยแล้วทำให้ลด Cumulative Layout Shift ไปได้เหลือ 0 ได้ง่ายมากๆ"
+			],
+			"textContent": "โดยเฉพาะเมื่อมี metric ของ web vital เข้ามามีส่วนด้วยแล้วทำให้ลด Cumulative Layout Shift ไปได้เหลือ 0 ได้ง่ายมากๆ"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"นอกจากนี้ Skeleton Layout ยังมีใช้ในหลักการของ UX เพื่อให้ User สามารถคาดเดาตำแหน่งคร่าวๆ ของ (web) app เราได้ระหว่างรอจนกว่า web จะพร้อม"
+			],
+			"textContent": "นอกจากนี้ Skeleton Layout ยังมีใช้ในหลักการของ UX เพื่อให้ User สามารถคาดเดาตำแหน่งคร่าวๆ ของ (web) app เราได้ระหว่างรอจนกว่า web จะพร้อม"
+		},
+		{
+			"nodeName": "h2",
+			"children": ["LocalStorage as Client-side cache"],
+			"textContent": "Client-side cache"
+		},
+		{
+			"nodeName": "p",
+			"textContent": "ด้วยความที่ข้อมูลที่ค่อนข้างนิ่งมากๆ การที่จะเรียกจาก API server ทุกครั้งที่เข้าเว็บ แล้วรอให้ API Server ตอบกลับมาคงเป็นอะไรที่น่ารำคาญมากๆ เพราะเรารู้อยู่แล้วว่าข้อมูลนิ่ง แล้วทำไมเราต้อง load ให้เสียเวลาด้วย",
+			"children": [
+				"ด้วยความที่ข้อมูลที่ค่อนข้างนิ่งมากๆ การที่จะเรียกจาก API server ทุกครั้งที่เข้าเว็บ แล้วรอให้ API Server ตอบกลับมาคงเป็นอะไรที่น่ารำคาญมากๆ เพราะเรารู้อยู่แล้วว่าข้อมูลนิ่ง แล้วทำไมเราต้อง load ให้เสียเวลาด้วย"
+			]
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"ทำให้เราทำการเขียนข้อมูลที่ได้จาก API ที่ Client Side ผ่าน LocalStorage ได้เลย แล้วพอเข้าเว็บใหม่ก็หยิบจาก LocalStorage มาแสดงก่อน ค่อยทำการ fetch แล้ว validate ว่าข้อมูลตรงกับ server หรือเปล่า ถ้าไม่ก็ render ใหม่และทำการ cache ไปที่ LocalStorage อีกครั้ง"
+			],
+			"textContent": "ทำให้เราทำการเขียนข้อมูลที่ได้จาก API ที่ Client Side ผ่าน LocalStorage ได้เลย แล้วพอเข้าเว็บใหม่ก็หยิบจาก LocalStorage มาแสดงก่อน ค่อยทำการ fetch แล้ว validate ว่าข้อมูลตรงกับ server หรือเปล่า ถ้าไม่ก็ render ใหม่และทำการ cache ไปที่ LocalStorage อีกครั้ง"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"นอกจากนี้ เรายังสามารถทำการ cache static content ต่างๆ บนเว็บได้ด้วยทำเว็บให้เป็น Progressive Web App (PWA) ด้วยการเขียน Service Worker เพื่อ cache file ของเว็บ โดยเวลาเว็บถูกเรียกใหม่ ก็จะถูกเรียกมาจาก cache แทนการ download จาก server"
+			],
+			"textContent": "นอกจากนี้ เรายังสามารถทำการ cache static content ต่างๆ บนเว็บได้ด้วยทำเว็บให้เป็น Progressive Web App (PWA) ด้วยการเขียน Service Worker เพื่อ cache file ของเว็บ โดยเวลาเว็บถูกเรียกใหม่ ก็จะถูกเรียกมาจาก cache แทนการ download จาก server"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"แต่ด้วยความที่ web เราทุกอย่างเป็น static อยู่แล้ว เราก็สามารถ cache ทุกอย่างในเว็บไปได้เลย"
+			],
+			"textContent": "แต่ด้วยความที่ web เราทุกอย่างเป็น static อยู่แล้ว เราก็สามารถ cache ทุกอย่างในเว็บไปได้เลย"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"ประโยชน์ที่ได้จาก Client-side cache ตรงนี้ นอกจากไม่ต้องรอ Response จาก server แล้ว ยังทำให้เราสามารถทำให้ Web app ของเราทำงานแบบ Offline ได้เต็มที่พอรวมกับ PWA แล้ว ทำให้เว็บเราเร็วมากๆ"
+			],
+			"textContent": "ประโยชน์ที่ได้จาก Client-side cache ตรงนี้ นอกจากไม่ต้องรอ Response จาก server แล้ว ยังทำให้เราสามารถทำให้ Web app ของเราทำงานแบบ Offline ได้เต็มที่พอรวมกับ PWA แล้ว ทำให้เว็บเราเร็วมากๆ"
+		},
+		{
+			"nodeName": "h2",
+			"children": [""],
+			"textContent": "Lazy Render Content"
+		},
+		{
+			"nodeName": "p",
+			"textContent": "เทคนิค Lazyload ก็มักจะถูกใช้ในการ optimize แต่ด้วยความที่ Search Dreamin มีขนาดข้อมูลไม่มากและค่อนข้างนิ่ง แถมต้องการทำ cache ที่ client-side อยู่แล้วทำให้ เราสามารถทำการ render เฉพาะบางส่วนของข้อมูลที่เรามีได้ แล้วพอตั้งการข้อมูลใหม่ค่อย render เพิ่มขึ้นมา",
+			"children": [
+				"เทคนิค Lazyload ก็มักจะถูกใช้ในการ optimize แต่ด้วยความที่ Search Dreamin มีขนาดข้อมูลไม่มากและค่อนข้างนิ่ง แถมต้องการทำ cache ที่ client-side อยู่แล้วทำให้ เราสามารถทำการ render เฉพาะบางส่วนของข้อมูลที่เรามีได้ แล้วพอตั้งการข้อมูลใหม่ค่อย render เพิ่มขึ้นมา"
+			]
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"โดยเมนูทั้งหมดตอนนี้มีอยู่ 106 order ซึ่งถ้า render ออกมาทีเดียวจะอยู่ที่ประมาณ​ 1400 DOM Node ซึ่งต่อให้มี Skeleton Layout ก็เสียเวลามากอยู่ดี​ โดยเราเลือกที่จะทำการ render ที่ละ 20 Menu ทำให้ initial node ลดลงไปเหลือประมาณ 350 node"
+			],
+			"textContent": "โดยเมนูทั้งหมดตอนนี้มีอยู่ 106 order ซึ่งถ้า render ออกมาทีเดียวจะอยู่ที่ประมาณ​ 1400 DOM Node ซึ่งต่อให้มี Skeleton Layout ก็เสียเวลามากอยู่ดี​ โดยเราเลือกที่จะทำการ render ที่ละ 20 Menu ทำให้ initial node ลดลงไปเหลือประมาณ 350 node"
+		},
+		{
+			"nodeName": "img",
+			"children": [""],
+			"textContent": "",
+			"src": "file:///Users/aomkhunpanitchot/Documents/web/liliya/generated/assets/lazy-render.png",
+			"alt": "lazy-render.png"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"พอใกล้ที่ Content ใกล้ครบที่จะเคย render มทาแล้ว ก็ค่อยทำการ render ส่วนต่อไปของข้อมูล โดยในกรณีนี้ก็คือ พอเลื่อนใกล้ถึงด้านล่างสุด ก็ render เมนูเพิ่มมาอีก 20 อัน และทำไปเรื่อยๆ จะ render ครบ 106 เมนู แล้วค่อย removeEventListener ของ lazy render ออก เพื่อ free memory ของ listener function ตรงนี้"
+			],
+			"textContent": "พอใกล้ที่ Content ใกล้ครบที่จะเคย render มทาแล้ว ก็ค่อยทำการ render ส่วนต่อไปของข้อมูล โดยในกรณีนี้ก็คือ พอเลื่อนใกล้ถึงด้านล่างสุด ก็ render เมนูเพิ่มมาอีก 20 อัน และทำไปเรื่อยๆ จะ render ครบ 106 เมนู แล้วค่อย removeEventListener ของ lazy render ออก เพื่อ free memory ของ listener function ตรงนี้"
+		},
+		{
+			"nodeName": "h1",
+			"children": ["preload, pre-connect และ pre-fetch"],
+			"textContent": "preload, pre-connect และ pre-fetch"
+		},
+		{
+			"nodeName": "p",
+			"textContent": "ไฟล์บางส่วนอาจจะไม่ได้ถูกเรียกใช้ในครั้งแรกที่เว็บโหลด แต่อาจจะถูกเรียกใช้ในเวลาต่อมา จะดีกว่าไหมถ้าเราสามารถบอก browser ว่าเราต้องการที่จะใช้ file พวกนี้ทีหลัง ถ้าว่าง (อยู่ใน idle state) ก็ช่วยลองโหลดพวกนี้มาก่อนได้ไหม ประมาณนั้น",
+			"children": [
+				"ไฟล์บางส่วนอาจจะไม่ได้ถูกเรียกใช้ในครั้งแรกที่เว็บโหลด แต่อาจจะถูกเรียกใช้ในเวลาต่อมา จะดีกว่าไหมถ้าเราสามารถบอก browser ว่าเราต้องการที่จะใช้ file พวกนี้ทีหลัง ถ้าว่าง (อยู่ใน idle state) ก็ช่วยลองโหลดพวกนี้มาก่อนได้ไหม ประมาณนั้น"
+			]
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"ไฟล์บางอย่างที่จะได้ใช้ทีหลังก็อย่างเช่น ไฟล์ CSS ใน หน้าอื่น ที่เป็นผลจากการทำ code-splitting"
+			],
+			"textContent": "ไฟล์บางอย่างที่จะได้ใช้ทีหลังก็อย่างเช่น ไฟล์ CSS ใน หน้าอื่น ที่เป็นผลจากการทำ code-splitting"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"ทำให้เวลาเรียกใช้จริงๆ ก็สามารถหยิบมาใช้ได้เร็วขึ้น โดย preload, pre-connect และ pre-fetch จะมี priority ต่างกันสำหรับลำดับการเรียกใช้"
+			],
+			"textContent": "ทำให้เวลาเรียกใช้จริงๆ ก็สามารถหยิบมาใช้ได้เร็วขึ้น โดย preload, pre-connect และ pre-fetch จะมี priority ต่างกันสำหรับลำดับการเรียกใช้"
+		},
+		{
+			"nodeName": "h2",
+			"children": ["Content-visibility"],
+			"textContent": "content-visibility = สุดยอดในการ optimize browser render"
+		},
+		{
+			"nodeName": "img",
+			"textContent": "",
+			"children": [""],
+			"src": "file:///Users/aomkhunpanitchot/Documents/web/liliya/generated/assets/content-visibility.png",
+			"alt": "content-visibility.png"
+		},
+		{
+			"nodeName": "p",
+			"textContent": "Content Visibility เป็น CSS property ที่พึ่งถูกเพิ่มเข้ามาใน Chrome 85",
+			"children": [
+				"Content Visibility เป็น CSS property ที่พึ่งถูกเพิ่มเข้ามาใน Chrome 85"
+			]
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"โดยหน้าที่ของ Content-Visibility คือทำการ 'lazy paint' แค่เฉพาะส่วนที่ browser เห็นเท่านั้น"
+			],
+			"textContent": "โดยหน้าที่ของ Content-Visibility คือทำการ 'lazy paint' แค่เฉพาะส่วนที่ browser เห็นเท่านั้น"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"เช่น web ของเรามีความสูงอยู่ที่ 6,000 pixel แต่ browser ที่แสดงผลอาจจะอยู่ที่ประมาณ 700-800 pixel โดยปกติแล้ว browser จะทำการ paint ทั้งหมด 6,000 pixel ซึ่งความเร็วก็ขึ้นอยู่กับ CSS property และความซับซ้อนของ DOM node ด้วย ทำให้มักจะเสียเวลา render มาก"
+			],
+			"textContent": "เช่น web ของเรามีความสูงอยู่ที่ 6,000 pixel แต่ browser ที่แสดงผลอาจจะอยู่ที่ประมาณ 700-800 pixel โดยปกติแล้ว browser จะทำการ paint ทั้งหมด 6,000 pixel ซึ่งความเร็วก็ขึ้นอยู่กับ CSS property และความซับซ้อนของ DOM node ด้วย ทำให้มักจะเสียเวลา render มาก"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"แต่พอใส่ Content Visibility ใน Layout แล้ว Child Node ของ Layout นั้นก็จะ render เฉพาะ child ที่แสดงผลต่อ browser แค่ในช่วงเวลานั้นเท่านั้น"
+			],
+			"textContent": "แต่พอใส่ Content Visibility ใน Layout แล้ว Child Node ของ Layout นั้นก็จะ render เฉพาะ child ที่แสดงผลต่อ browser แค่ในช่วงเวลานั้นเท่านั้น"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"พูดง่ายๆ คือ browser ก็จะ paint แค่ส่วนของ 700-800 pixel ที่แสดง และ 5,000 กว่า pixel ที่เหลือการจะ paint ก็ต่อเมื่อ user scroll ลงไปเจอแล้วเท่านั้น"
+			],
+			"textContent": "พูดง่ายๆ คือ browser ก็จะ paint แค่ส่วนของ 700-800 pixel ที่แสดง และ 5,000 กว่า pixel ที่เหลือการจะ paint ก็ต่อเมื่อ user scroll ลงไปเจอแล้วเท่านั้น"
+		},
+		{ "nodeName": "h1", "children": ["ผลลัพธ์"], "textContent": "ผลลัพธ์" },
+		{
+			"nodeName": "img",
+			"children": [""],
+			"textContent": "",
+			"src": "file:///Users/aomkhunpanitchot/Documents/web/liliya/generated/assets/paint-performance.jpg",
+			"alt": "paint-performance.jpg"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"โดยเทคนิคต่างๆ ที่ร่ายยาวมานี้ ทำให้ขนาด bundle JavaScript ของ JavaScript เหลือแค่ 14.5KB และขึ้น performance 100 บน lighthouse ได้ง่ายๆ"
+			],
+			"textContent": "โดยเทคนิคต่างๆ ที่ร่ายยาวมานี้ ทำให้ขนาด bundle JavaScript ของ JavaScript เหลือแค่ 14.5KB และขึ้น performance 100 บน lighthouse ได้ง่ายๆ"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"และนอกจากการที่เว็บโหลดเร็วแล้ว performance ยังดีมากๆ อีกด้วย โดย scripting อยู่ที่ 80ms, Rendering แค่ 37ms และ painting อยู่ที่ 17ms เอง"
+			],
+			"textContent": "และนอกจากการที่เว็บโหลดเร็วแล้ว performance ยังดีมากๆ อีกด้วย โดย scripting อยู่ที่ 80ms, Rendering แค่ 37ms และ painting อยู่ที่ 17ms เอง"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"นอกจากนี้ยังสามารถ add to homescreen ได้จากการทำเป็น PWA ได้ด้วย ทำให้ได้หน้าต่างสวยๆ มาใช้แบบนี้"
+			],
+			"textContent": "นอกจากนี้ยังสามารถ add to homescreen ได้จากการทำเป็น PWA ได้ด้วย ทำให้ได้หน้าต่างสวยๆ มาใช้แบบนี้"
+		},
+		{
+			"nodeName": "img",
+			"children": [""],
+			"textContent": "",
+			"src": "file:///Users/aomkhunpanitchot/Documents/web/liliya/generated/assets/dreamin-edge.jpg",
+			"alt": "dreamin-edge.jpg"
+		},
+		{
+			"nodeName": "p",
+			"children": [
+				"ถ้าอยากรู้ว่าเว็บเร็วขนาดไหน ก็",
+				{
+					"nodeName": "a",
+					"textContent": "ลองกดเข้าไปดูเองได้เลย~",
+					"href": "http://dreamin-edge.now.sh/"
+				},
+				""
+			],
+			"textContent": "ถ้าอยากรู้ว่าเว็บเร็วขนาดไหน ก็ลองกดเข้าไปดูเองได้เลย~"
+		},
+		{ "nodeName": "p", "children": [""], "textContent": "" }
+	]
+}

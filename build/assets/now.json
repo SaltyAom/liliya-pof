@@ -1,0 +1,23 @@
+{
+    "version": 2,
+    "builds": [
+        { "src": "**/*.html", "use": "@now/static" },
+        { "src": "assets/**", "use": "@now/static" },
+        { "src": "robots.txt", "use": "@now/static" },
+        { "src": "service-worker.js", "use": "@now/static" }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET",
+                "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept",
+                "Cache-Control": "public, max-age=604800, s-maxage=604800",
+                "Accept-Encoding": "gzip",
+                "Service-Worker-Allowed": "/",
+                "Vary": "Accept-Encoding"
+            }
+        }
+    ]
+}

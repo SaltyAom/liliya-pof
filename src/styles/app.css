@@ -1,0 +1,89 @@
+:root {
+    --title: #333;
+    --content: #757575;
+
+    --success: #4cd964;
+    --success-text: #379948;
+    --success-overlay: rgba(76, 217, 100, .2);
+    --link: #008bff;
+    --link-overlay: rgba(0,123,255,.2);
+    
+    --root: #fff;
+    --border: #ceced2;
+    --preload: #efeff4;
+    --background: rgb(250,250,250);
+    --background-fade: rgb(250,250,250, .85);
+}
+
+#appbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 36px;
+    padding: 0 80px;
+    background-color: var(--background-fade);
+    backdrop-filter: blur(6px);
+    -webkit-app-region: drag;
+}
+
+#appbar > .bar {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: center;
+    height: inherit;
+}
+
+#app-title {
+    justify-content: center;
+    font-size: 14px;
+    color: var(--title);
+    font-weight: 400;
+    -webkit-app-region: drag;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+#app-back {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    padding: 4px 8px 4px 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#app-back > .icon {
+    width: 21px;
+    height: 21px;
+    cursor: pointer;
+}
+
+#app-back > .title {
+    color: var(--content);
+    margin: 0;
+    cursor: pointer;
+}
+
+#app-back:hover,
+#app-back:focus {
+    background-color: var(--link-overlay);
+}
+
+#app-back:hover > .icon,
+#app-back:focus > .icon {
+    stroke: var(--link);
+}
+
+#app-back:hover > .title,
+#app-back:focus > .title {
+    color: var(--link);
+}
